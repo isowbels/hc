@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Connect|Patient Register</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- navigation/header -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/LOGO AFTER.png" alt="Logo" class="logo-image">
+            <span>HealthConnect</span>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="divider"><a href="#" class="button login-btn" onclick="openPopup('login')">Log in</a></li>
+                <li><a href="#" class="button signup-btn" onclick="openPopup('signup')">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Popup -->
+    <div class="popup" id="login-popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/pat.jpg" alt="Doctor" class="popup-image">
+            </div>
+            <div class="popup-right">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" class="popup-input">
+                <input type="password" placeholder="Password" class="popup-input">
+                <div class="remember-container">
+                    <label><input type="checkbox" class="remember-checkbox">Remember me</label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button class="popup-btn login-btn">Login</button>
+                <p class="login-link">Need an account? <a href="#" onclick="openPopup('signup')">Sign up</a></p>
+                <div class="or-container">
+                    <span>OR</span>
+                </div>
+                <button class="popup-btn facebook-btn"><i class="fab fa-facebook"></i> Login with Facebook</button>
+                <button class="popup-btn google-btn"><i class="fab fa-google"></i> Login with Google</button>
+            </div>
+            <button class="close-btn" onclick="closePopup()">X</button>
+        </div>
+    </div>
+
+    <!-- Sign-Up Popup -->
+    <div class="popup" id="signup-popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/pat.jpg" alt="Doctor" class="popup-image">
+            </div>
+            <div class="popup-right">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Full Name" class="popup-input">
+                <input type="email" placeholder="Email" class="popup-input">
+                <input type="password" placeholder="Password" class="popup-input">
+                <button class="popup-btn signup-btn">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="#" onclick="openPopup('login')">Log in</a></p>
+                <div class="or-container">
+                    <span>OR</span>
+                </div>
+                <button class="popup-btn facebook-btn"><i class="fab fa-facebook"></i> Login with Facebook</button>
+                <button class="popup-btn google-btn"><i class="fab fa-google"></i> Login with Google</button>
+            </div>
+            <button class="close-btn" onclick="closePopup()">X</button>
+        </div>
+    </div>
+
+
+
+    <section class="registration-form">
+        <div class="form-container">
+            <div class="form-header">
+                <img src="images/LOGO AFTER.png" alt="Heart Logo" class="form-logo">
+                <h1 class="form-title">Patient Registration</h1>
+            </div>
+            <p class="form-subtitle">Please fill in the form below</p>
+            <form>
+                <div class="form-group">
+                    <label for="registration-date">Registration Date</label>
+                    <input type="date"  class="input-date" id="registration-date" name="registration-date">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="last-name">Patient Name</label>
+                        <input type="text"  class="input-name" id="last-name" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text"  class="input-name" id="first-name" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text"  class="input-name" id="middle-initial" placeholder="Middle Initial">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date"  class="input-date" id="dob" name="dob">
+                    </div>
+                    <div class="form-group">
+                        <label for="sex">Sex</label>
+                        <select id="sex">
+                            <option>Select</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="marital-status">Marital Status</label>
+                        <select id="marital-status">
+                            <option>Select</option>
+                            <option>Single</option>
+                            <option>Married</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="tel" class="input-tel" id="contact-number" placeholder="(00) 000 0000">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="input-name" id="street-address" placeholder="Street Address">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" class="input-name" id="province" placeholder="Province">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="input-name" id="city" placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="input-name" id="barangay" placeholder="Barangay">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="input-name" id="postal-code" placeholder="Postal Code">
+                    </div>
+                </div>
+                <h3>Medical History</h3>
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="anemia">
+                        <label for="anemia">Anemia</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="asthma">
+                        <label for="asthma">Asthma</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="bronchitis">
+                        <label for="bronchitis">Bronchitis</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="chickenpox">
+                        <label for="chickenpox">Chickenpox</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="diabetes">
+                        <label for="diabetes">Diabetes</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="pneumonia">
+                        <label for="pneumonia">Pneumonia</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="ulcer">
+                        <label for="ulcer">Ulcer</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="upload-document">Upload Document (OCR)</label>
+                    <input type="file" class="input-file" id="upload-document">
+                </div>
+                <button type="submit" class="submit-button">Register Patient</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/LOGO AFTER.png" alt="Heart Logo">
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <hr>
+            <p>&copy; 2024 HealtConnect. All rights reserved</p>
+        </div>
+    </footer>
+
+
+
+    <script src="assets/js/jscript.js"></script>
+</body>
+
+</html>

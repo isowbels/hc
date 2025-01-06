@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Connect|Health Monitor</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- navigation/header -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/LOGO AFTER.png" alt="Logo" class="logo-image">
+            <span>HealthConnect</span>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="divider"><a href="#" class="button login-btn" onclick="openPopup('login')">Log in</a></li>
+                <li><a href="#" class="button signup-btn" onclick="openPopup('signup')">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Popup -->
+    <div class="popup" id="login-popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/pat.jpg" alt="Doctor" class="popup-image">
+            </div>
+            <div class="popup-right">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" class="popup-input">
+                <input type="password" placeholder="Password" class="popup-input">
+                <div class="remember-container">
+                    <label><input type="checkbox" class="remember-checkbox">Remember me</label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button class="popup-btn login-btn">Login</button>
+                <p class="login-link">Need an account? <a href="#" onclick="openPopup('signup')">Sign up</a></p>
+                <div class="or-container">
+                    <span>OR</span>
+                </div>
+                <button class="popup-btn facebook-btn"><i class="fab fa-facebook"></i> Login with Facebook</button>
+                <button class="popup-btn google-btn"><i class="fab fa-google"></i> Login with Google</button>
+            </div>
+            <button class="close-btn" onclick="closePopup()">X</button>
+        </div>
+    </div>
+
+    <!-- Sign-Up Popup -->
+    <div class="popup" id="signup-popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/pat.jpg" alt="Doctor" class="popup-image">
+            </div>
+            <div class="popup-right">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Full Name" class="popup-input">
+                <input type="email" placeholder="Email" class="popup-input">
+                <input type="password" placeholder="Password" class="popup-input">
+                <button class="popup-btn signup-btn">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="#" onclick="openPopup('login')">Log in</a></p>
+                <div class="or-container">
+                    <span>OR</span>
+                </div>
+                <button class="popup-btn facebook-btn"><i class="fab fa-facebook"></i> Login with Facebook</button>
+                <button class="popup-btn google-btn"><i class="fab fa-google"></i> Login with Google</button>
+            </div>
+            <button class="close-btn" onclick="closePopup()">X</button>
+        </div>
+    </div>
+
+
+
+    <section class="health-monitoring">
+        <div class="health-container">
+            <div class="health-header">
+                <img src="images/LOGO AFTER.png" alt="Heart Logo" class="health-logo">
+                <h1 class="health-title">Health Monitoring</h1>
+            </div>
+
+            <!-- Record Vitals Section -->
+            <div class="health-form">
+                <h2 class="section-title">Record Vitals</h2>
+                <form>
+                    <div class="health-group">
+                        <label for="vitals-patient-name">Patient Name:</label>
+                        <div class="health-row">
+                            <input type="text" class="healt-in" id="vitals-last-name" placeholder="Last Name">
+                            <input type="text" class="healt-in" id="vitals-first-name" placeholder="First Name">
+                            <input type="text" class="healt-in" id="vitals-middle-initial" placeholder="Middle Initial">
+                        </div>
+                    </div>
+                    <div class="health-group">
+                        <label for="blood-pressure">Blood Pressure:</label>
+                        <input type="text" class="healt-in"  id="blood-pressure" placeholder="e.g., 120/80">
+                    </div>
+                    <div class="health-group">
+                        <label for="heart-rate">Heart Rate:</label>
+                        <input type="text" class="healt-in"  id="heart-rate" placeholder="e.g., 72">
+                    </div>
+                    <button type="submit" class="record-button">Record Vitals</button>
+                </form>
+            </div>
+
+            <!-- Chronic Disease Section -->
+            <div class="health-form">
+                <h2 class="section-title">Chronic Disease</h2>
+                <form>
+                    <div class="health-group">
+                        <label for="disease-patient-name">Patient Name:</label>
+                        <div class="health-row">
+                            <input type="text"  class="healt-in" id="disease-first-name" placeholder="First Name">
+                            <input type="text"  class="healt-in" id="disease-middle-initial" placeholder="Middle Initial">
+                            <input type="text"  class="healt-in" id="disease-last-name" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="health-group">
+                        <label for="disease">Disease:</label>
+                        <input type="text" class="healt-in"  id="disease" placeholder="e.g., Diabetes">
+                    </div>
+                    <div class="health-group">
+                        <label for="diagnosis-date">Diagnosis Date:</label>
+                        <input type="date" class="healt-in"  id="diagnosis-date">
+                    </div>
+                    <button type="submit" class="record-button">Record Disease</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/LOGO AFTER.png" alt="Heart Logo">
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <hr>
+            <p>&copy; 2024 HealtConnect. All rights reserved</p>
+        </div>
+    </footer>
+
+
+
+    <script src="assets/js/jscript.js"></script>
+</body>
+
+</html>

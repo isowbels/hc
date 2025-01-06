@@ -1,0 +1,1022 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    color: #910c00;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #910c00;
+    margin-left: 100px;
+}
+
+.header .logo img {
+    width: 70px;
+    height: 70px;
+    margin-right: 8px;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+    margin-right: 100px;
+}
+
+.navigation ul li {
+    margin: 0;
+}
+
+.navigation ul li a {
+    color: #910c00;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation ul li a:hover {
+    color: #ffbbb5;
+}
+
+.navigation ul li.divider {
+    position: relative;
+}
+
+.navigation ul li.divider::before {
+    content: "";
+    height: 24px;
+    width: 1px;
+    background: #910c00;
+    position: absolute;
+    left: -0.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navigation ul li a.button {
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+}
+
+.navigation ul li a.login-btn {
+    color: #910c00;
+    background: none;
+    border: 2px solid #910c00;
+}
+
+.navigation ul li a.login-btn:hover {
+    background: #910c00;
+    color: #fff;
+}
+
+.navigation ul li a.signup-btn {
+    color: #fff;
+    background: #910c00;
+}
+
+.navigation ul li a.signup-btn:hover {
+    background: #ff4c4c;
+}
+
+
+
+
+/* login signup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup Content */
+.popup-content {
+    display: flex;
+    background: rgba(0, 0, 0, 0.349);
+    border-radius: 10px;
+    width: 1000px;
+    height: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Left Side with Image */
+.popup-left {
+    flex: 1;
+    background: #f0f0f0;
+}
+
+.popup-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Right Side with Login and Sign Up */
+.popup-right {
+    flex: 1;
+    padding: 2rem;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.popup-right h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+/* Input Fields */
+.popup-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Remember Me */
+.remember-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.remember-checkbox {
+    margin-right: 0.5rem;
+}
+
+/* Buttons */
+.popup-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #910c00;
+    color: white;
+}
+
+.signup-btn {
+    background-color: #0056b3;
+    color: white;
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: white;
+}
+
+.google-btn {
+    background-color: #db4437;
+    color: white;
+}
+
+/* OR Separator */
+.or-container {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    position: relative;
+}
+
+.or-container span {
+    padding: 0 1rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.or-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    background: #ccc;
+}
+
+/* Divider */
+.divider {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 2rem 0;
+}
+
+/* Forgot Password */
+.forgot-password {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #ff0000;
+    text-decoration: none;
+    margin-left: 220px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.login-link a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #910c00;
+}
+
+
+
+
+
+
+/* section1 */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    background: #f4f4f4;
+}
+
+.hero .text {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero h1 {
+    color: #000;
+    font-size: 70px;
+    margin-bottom: 1rem;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.hero p {
+    color: #000;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    margin-left: 100px;
+}
+
+.hero .image {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.hero img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* section2 */
+.features {
+    text-align: center;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+.features h2 {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    color: #000;
+}
+
+.service-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.service {
+    background: #f5f5f5;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    height: 160px;
+}
+
+.service i {
+    font-size: 3rem;
+    color: #555;
+}
+
+.service span {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.service.active {
+    background: #a32020;
+    color: #fff;
+}
+
+.service.active i {
+    color: #fff;
+}
+
+.service-card {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    max-width: 400px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-details {
+    padding: 1rem;
+    text-align: left;
+}
+
+.service-details h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-details p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+
+/* section3 */
+.testimonials {
+    padding: 2rem;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+    margin-top: 70px;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: #a32020;
+    margin-bottom: 0.5rem;
+}
+
+.testimonials h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: #a32020;
+    margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.testimonial-card {
+    background: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 350px;
+}
+
+.testimonial-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #a32020;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.testimonial-icon i {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.testimonial-card h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+/* section4 */
+.why-choose-us {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.why-choose-us h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.benefits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem; /* Increased gap between benefits */
+    flex-wrap: wrap;
+}
+
+.benefit {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Increased spacing between icon and text */
+    text-align: left;
+}
+
+.benefit .icon {
+    background-color: #a10e1e;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+}
+
+.benefit p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+
+
+.footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #e8e4e4; /* Light gray background */
+    color: #333; /* Dark gray text color */
+    position: relative;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons i {
+    color: #333;
+    font-size: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons i:hover {
+    color: #a10e1e;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #a10e1e;
+    margin: 1rem 0;
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+/* about style */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: #fff;
+    text-align: left;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-text-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 2rem;
+    color: #910c00;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+}
+
+.stat i {
+    font-size: 2.5rem;
+    color: #910c00;
+    margin-bottom: 0.5rem;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #666;
+}
+
+
+
+
+
+/* patient register */
+.registration-form {
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container {
+    max-width: 900px;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-logo {
+    width: 50px;
+    height: auto;
+}
+
+.form-title {
+    text-align: center;
+    color: #910c00;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.form-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.input-name[type="text"],
+.input-date[type="date"],
+.input-tel[type="tel"],
+select,
+.input-file[type="file"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-file[type="file"] {
+    padding: 0.3rem;
+}
+
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submit-button {
+    background: #910c00;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #ff4c4c;
+}
+
+
+
+
+
+
+/* automated ref form */
+.automated-referral {
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.referral-form-container {
+    max-width: 600px;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.referral-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.referral-logo {
+    width: 50px;
+    height: auto;
+}
+
+.referral-title {
+    color: #910c00;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.referral-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.referral-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #910c00;
+    font-size: 20px;
+}
+
+.auto-in[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+.referral-submit-button {
+    background: #910c00;
+    color: white;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.referral-submit-button:hover {
+    background: #ff4c4c;
+}
+
+
+
+
+
+
+/* health monitoring form */
+.health-monitoring {
+    padding: 2rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.health-container {
+    max-width: 900px;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.health-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.health-logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.health-title {
+    color: #910c00;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #910c00;
+    margin-bottom: 1rem;
+}
+
+.health-form {
+    margin-bottom: 2rem;
+}
+
+.health-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.health-group label {
+    font-weight: bold;
+    color: #910c00;
+    font-size: 20px;
+}
+
+.health-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.health-row .healt-in {
+    flex: 1;
+}
+
+.healt-in[type="text"],
+.healt-in[type="date"],
+.record-button {
+    width: 45%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.record-button {
+    background: #910c00;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 220px;
+}
+
+.record-button:hover {
+    background: #ff4c4c;
+}

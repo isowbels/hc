@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Connect</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- nav/header -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/LOGO AFTER.png" alt="Logo" class="logo-image">
+            <span>HealthConnect</span>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="divider"><a href="#" class="button login-btn" onclick="openPopup('login')">Log in</a></li>
+                <li><a href="#" class="button signup-btn" onclick="openPopup('signup')">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Login Popup -->
+    <div class="popup" id="login-popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/pat.jpg" alt="Doctor" class="popup-image">
+            </div>
+            <div class="popup-right">
+                <h2>Login</h2>
+                <input type="text" placeholder="Username" class="popup-input">
+                <input type="password" placeholder="Password" class="popup-input">
+                <div class="remember-container">
+                    <label><input type="checkbox" class="remember-checkbox">Remember me</label>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button class="popup-btn login-btn">Login</button>
+                <p class="login-link">Need an account? <a href="#" onclick="openPopup('signup')">Sign up</a></p>
+                <div class="or-container">
+                    <span>OR</span>
+                </div>
+                <button class="popup-btn facebook-btn"><i class="fab fa-facebook"></i> Login with Facebook</button>
+                <button class="popup-btn google-btn"><i class="fab fa-google"></i> Login with Google</button>
+            </div>
+            <button class="close-btn" onclick="closePopup()">X</button>
+        </div>
+    </div>
+
+    <!-- Sign-Up Popup -->
+    <div class="popup" id="signup-popup">
+        <div class="popup-content">
+            <div class="popup-left">
+                <img src="images/pat.jpg" alt="Doctor" class="popup-image">
+            </div>
+            <div class="popup-right">
+                <h2>Sign Up</h2>
+                <input type="text" placeholder="Full Name" class="popup-input">
+                <input type="email" placeholder="Email" class="popup-input">
+                <input type="password" placeholder="Password" class="popup-input">
+                <button class="popup-btn signup-btn">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="#" onclick="openPopup('login')">Log in</a></p>
+                <div class="or-container">
+                    <span>OR</span> 
+                </div>
+                <button class="popup-btn facebook-btn"><i class="fab fa-facebook"></i> Login with Facebook</button>
+                <button class="popup-btn google-btn"><i class="fab fa-google"></i> Login with Google</button>
+            </div>
+            <button class="close-btn" onclick="closePopup()">X</button>
+        </div>
+    </div>
+
+
+    <!-- section1 -->
+    <section class="hero">
+        <div class="text">
+            <h1>Bridging Health Units for Better Care.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        </div>
+        <div class="image">
+            <img src="images/pat.jpg" alt="Healthcare professional and patient">
+        </div>
+    </section>
+
+
+
+   
+    <!-- section2 -->
+    <section class="features">
+        <h2>Our Service</h2>
+        <div class="service-container">
+            <div class="service-grid">
+                <div class="service active">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Service Name</span>
+                </div>
+                <div class="service">
+                    <i class="fas fa-heart"></i>
+                    <span>Service Name</span>
+                </div>
+                <div class="service">
+                    <i class="fas fa-stethoscope"></i>
+                    <button onclick="location.href='u_health_monitor.html'">Health Monitoring</button>
+                    
+                </div>
+                <div class="service">
+                    <i class="fas fa-prescription-bottle-alt"></i>
+                    <span>Service Name</span>
+                </div>
+                <div class="service">
+                    <i class="fas fa-ambulance"></i>
+                    <button onclick="location.href='u_auto_referral.html'">Referral</button>
+                    
+                </div>
+                <div class="service">
+                    <i class="fas fa-user-md"></i>
+                    <button onclick="location.href='u_patient_register.html'">Patient Register</button>
+                    
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="images/dilaw.png" alt="Service Image" />
+                <div class="service-details">
+                    <h3>Service Name</h3>
+                    <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum.</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+
+    <!-- section3 -->
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <h3>What Client Says</h3>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-icon">
+                    <i class="fa fa-user-circle"></i>
+                </div>
+                <h4>Name</h4>
+                <p>LOREM IPSUM<br>LOREM IPSUM<br>LOREM IPSUM<br>LOREM IPSUM</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-icon">
+                    <i class="fa fa-user-circle"></i>
+                </div>
+                <h4>Name</h4>
+                <p>LOREM IPSUM<br>LOREM IPSUM<br>LOREM IPSUM<br>LOREM IPSUM</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-icon">
+                    <i class="fa fa-user-circle"></i>
+                </div>
+                <h4>Name</h4>
+                <p>LOREM IPSUM<br>LOREM IPSUM<br>LOREM IPSUM<br>LOREM IPSUM</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- section4 -->
+    <section class="why-choose-us">
+        <h2>Why Choose Our Health Management System?</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <div class="icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <p>Patient Information Management</p>
+            </div>
+            <div class="benefit">
+                <div class="icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <p>Appointment Scheduling</p>
+            </div>
+            <div class="benefit">
+                <div class="icon">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <p>Medical History Tracking</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/LOGO AFTER.png" alt="Heart Logo">
+            </div>
+            <div class="social-icons">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <hr>
+            <p>&copy; 2024 HealtConnect. All rights reserved</p>
+        </div>
+    </footer>
+
+
+
+    <script src="assets/js/jscript.js"></script>
+</body>
+
+</html>
